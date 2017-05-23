@@ -9,9 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.3'
 # Use sqlite3 as the database for Active Record
-gem 'pg', '~> 0.19', group: :production # Added postgres and made it production only.
- # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: :development # Added development group.
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -39,6 +37,14 @@ gem 'faker', '~> 1.7', '>= 1.7.3', group: :development
 # gem 'capistrano-rails', group: :development
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 gem 'font-awesome-sass'
+
+
+
+gem 'pg', '~> 0.19', group: :production # Added postgres and made it production only.
+ # Use sqlite3 as the database for Active Record
+gem 'sqlite3', group: :development # Added development group.
+
+ gem 'rails_12factor'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
