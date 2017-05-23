@@ -1,0 +1,89 @@
+<div class="dashboard">
+	<div class="jumbotron">
+		<div class="overlay">
+			<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-2">
+					<h1>Do you looking for a Job?</h1>
+				<p>In cursus at diam vitae viverra. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi facilisis tellus sit amet dui elementum congue.</p>
+				<button class="btn btn-findjob">find job</button>
+				</div> 
+			</div>
+		</div>
+		</div> 
+	</div>
+</div>
+ 
+	<div class="container">
+			<div class="row">
+			<div class="section-title clearfix medium text-center "> 
+					<h3 class="heading text-center"> Featured Jobs</h3>
+					 
+							<i class="fa fa-briefcase" aria-hidden="true"></i>
+				 							
+				</div>
+				<% if user_signed_in? %>
+				<div class="col-md-2">
+				 		<h3 class="text-center latest-5-job">Latest 5 Jobs</h3>
+				 	 
+					 		 <ol>
+					  	
+				  		 		<% @gigs.last(5).each do |gig| %>
+				   		
+				   					<li> <%= link_to gig.name, gig %> 	</li> 
+									<% end %> 
+				  
+				 			 </ol> 
+					</div>
+					<div class="col-md-8">
+						
+								<% @gigs.each do |gig| %>
+										<div class="all-jobs"> 
+												<h3><%= link_to gig.name, gig %> </h3>
+												 <small  class="  ">posted: <%= gig.created_at.strftime("%b %d, %Y") %></small> 
+									  </div> 
+								 <% end %>  
+								 <div class="pull-right">
+									<%= paginate @gigs %>
+
+								</div>
+
+				 </div>
+					<div class="right-sidebar-all-jobs">
+						 <div class="col-md-2">
+						 	<input type="search" name="search" value="Search for a job..."  " class="  form-control">
+						 </div>
+					</div> 
+					<% else %>
+					<div class="col-md-12 ">
+				 		<h3 class=" text-center latest-5-job ">Latest 5 Jobs</h3>
+
+					 		  <div class="text-center ">
+					 		  <% if !user_signed_in? %>
+						 <%= link_to "Find more awesome jobs, register for free", new_user_registration_path, class: "btn btn-info-morejob " %>
+						 <% end %>
+					</div>
+					  	
+				  		 		<% @gigs.last(5).each do |gig| %>
+				   			<div class="all-jobs "> 
+				   				 <h3> <%= link_to gig.name, gig %> </h3> 
+				   				 <h5><b>description:</b> <%= gig.description %></h5> 
+				   				  <h5><b>Location:</b> <%= gig.location %></h5> 
+				   				  <h5><b>Budget: $</b><%= gig.budget %>, 00</h5> 
+				   				   <small  class="  ">posted: <%= gig.created_at.strftime("%b %d, %Y") %></small> 
+				   			 	</div> 
+									<% end %> 
+				  
+				 			 
+					</div>
+
+					<% end %> 
+					 <% if !user_signed_in? %>
+					<div class="text-center  e">
+						 <%= link_to "Find more awesome jobs, register for free", new_user_registration_path, class: "btn btn-info-morejob  " %>
+						 <% end %>
+					</div>
+					
+			</div>
+	</div>
+ 

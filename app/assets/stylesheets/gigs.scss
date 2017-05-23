@@ -1,0 +1,128 @@
+// Place all the styles related to the Gigs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+    background: #fcfcfc ;
+}
+a{
+  color: #111 !important;
+  transition: all 0.5s;
+}
+a:hover, a:focus {
+    color: #1a1c1e;
+    text-decoration: underline;
+}
+
+.all-jobs{
+	margin-bottom: 0; 
+	border-top: 1px solid #eee;
+	border-left: 1px solid #e3e3e3;
+	border-right: 1px solid #e3e3e3;
+	list-style: outside none none;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	border-bottom: 1px solid #eee;
+  background: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+	 
+}
+.all-jobs a{
+	padding: 0 30px;
+}
+.all-jobs small{
+  padding: 0 30px;
+}.all-jobs h5{
+  padding: 0 30px;
+}
+ 
+.all-jobs img{
+	border: 1px solid #e5e5e5;
+box-shadow: none;
+float: left;
+height: 75px;
+left: 1em;
+margin-right: 30px;
+position: static;
+vertical-align: middle;
+width: auto;
+}
+.all-jobs a{
+  color: #14b1bb !important;
+  font-size: 22px;
+  line-height: inherit;
+  margin: 0 0 5px;
+  padding: 0;
+}
+.all-jpbs p{
+	margin: 0 0 5px;
+}
+.label-primary{
+	margin-top: 10px;
+}
+.pagination a, .pagination span.current, .pagination span.gap {
+    float: left;
+    padding: 0 14px;
+    line-height: 38px;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid #DDD;
+    border-left-width: 0;
+}
+
+.pagination {
+    border-left: 1px solid #ddd;
+    .first{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .prev {
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .page{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .next{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+    .last{
+        padding : 0;
+        float: none;
+        border: none;
+    }
+}
+ 
+.section-title h3{
+	text-transform: uppercase;
+}
+.show-job-page{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.latest-5-job{
+  color: #14b1bb;
+}
+.btn-info {
+    color: #fff !important;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+}
+ .btn-info-morejob {
+  color: #fff !important;
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    text-transform: uppercase;
+    padding: 20px 40px !important;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-size: 20px !important;
+ }

@@ -1,0 +1,37 @@
+.navbar-inverse{
+	background: #fff !important;
+	padding-top: 13px;
+	padding-bottom: 18px;
+	background-position: 50% -5px;
+	border-color: transparent !important;
+	box-shadow: 0 1px 3px rgba(50, 50, 50, 0.4);
+}
+.navbar-inverse .navbar-brand{
+	display: inline-block;
+	max-height: 40px;
+	margin: auto;
+	width: auto;
+	color: #14b1bb !important;
+	font-size: 38px;
+  font-weight: 900; 
+  text-transform: uppercase;
+}
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: transparent;
+}
+.navbar-inverse .navbar-nav > li > a {
+ color: #2d3e50;
+ text-transform: uppercase;
+ display: block;
+ text-align: center;
+ font-weight: 700;
+ transition: all 0.5s;
+}
+.navbar-inverse .navbar-nav > li > a:hover{
+	color: #14b1bb  !important;
+}
+.btn-signup-for-more a{
+	color: #fff !important;
+}
+ 

@@ -1,0 +1,48 @@
+<div class="contents">
+	<section id="post">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-12">
+					<h3 class="sub-heading">Post a Job</h3>
+					<div class="content-inner-detail">
+					 	<%= form_for @gig do |f| %>
+					 			<div class="row">
+					 				<div class="col-xs-12 col-md-6">
+					 					<div class="form-group">
+					 						<%= f.label :name %>
+					 						<%= f.text_field :name, class: 'form-control input-lg' %>
+					 						<small class="help-block">Name of your Job</small>
+					 					</div>
+					 				</div>
+					 					<div class="col-xs-12 col-md-6">
+					 					<div class="form-group">
+					 						<%= f.label :budget %>
+					 						<%= f.text_field :budget, class: 'form-control input-lg' %>
+					 						<small class="help-block">example: $100,00</small>
+					 					</div>
+					 				</div>
+					 			</div>	
+					 			<div class="row">
+					 			<div class="col-xs-12 col-md-6">
+					 					<div class="form-group">
+					 						<%= f.label :location %>
+					 						<%= f.text_field :location, class: 'form-control input-lg' %>
+					 						<small class="help-block">example: Los Angeles, Denver...</small>
+					 					</div>
+					 				</div>
+					 				<div class="col-xs-12 col-md-6">
+					 					<div class="form-group">
+					 						<%= f.label :description %>
+					 						<%= f.text_area :description, class: 'form-control row:10' %>
+					 						<small class="help-block">Tell us evrything about your Job request( programmer, front-end, make website responsive...)</small>
+					 					</div>
+					 				</div> 
+					 			</div>
+					 			<%= f.submit class: "btn btn-primary input-lg" %>
+					 	<% end %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

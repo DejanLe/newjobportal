@@ -1,0 +1,39 @@
+.jumbotron{
+	background: url(jobsportal.jpeg);
+	background-repeat: no-repeat;
+	height: 350px;
+	background-size: cover;
+	background-position:100% 10%;
+	background-attachment: fixed;
+	overflow: hidden !important;
+	margin-bottom: 0px;
+	padding-top: 0px !important;
+	padding-bottom:  0px !important;
+}
+.jumbotron h1{
+	padding-top: 25px;
+	font-size: 60px !important;
+	line-height: 65px !important;
+	color: #fff !important;
+	font-weight: 900;
+}
+.jumbotron p{
+	color:#fff ;
+}
+.btn-findjob{
+	padding: 10px 41px;
+	font-size: 18px !important; 
+	border-width: 0px;
+	border-style: solid;
+	border-color: #14B1BB;
+	border-radius: 5px;
+	text-transform: uppercase;
+	background:  #14b1bb !important;
+	color: #fff;
+	font-weight: 700 !important;
+}
+.overlay{
+	background: rgba(0,0,0,0.5);
+	height: 100vh;
+
+}
