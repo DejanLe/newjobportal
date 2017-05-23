@@ -38,13 +38,17 @@ gem 'faker', '~> 1.7', '>= 1.7.3', group: :development
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 gem 'font-awesome-sass'
 
+group :development do
+  gem 'sqlite3'
+end
 
+group :production do
+  gem 'rails_12factor'
+  gem 'pg', '~> 0.19' 
+end
 
-gem 'pg', '~> 0.19', group: :production # Added postgres and made it production only.
- # Use sqlite3 as the database for Active Record
-gem 'sqlite3', group: :development # Added development group.
-
- gem 'rails_12factor'
+ 
+ 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
