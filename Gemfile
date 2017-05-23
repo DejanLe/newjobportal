@@ -12,7 +12,7 @@ gem 'rails', '~> 5.0.3'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0' 
+gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'devise', '~> 4.3'
@@ -21,7 +21,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'faker', '~> 1.7', '>= 1.7.3', group: :development
-
+gem 'geocoder', '~> 1.4', '>= 1.4.4'
 gem 'kaminari', '~> 1.0', '>= 1.0.1'
 gem 'font-awesome-sass'
 

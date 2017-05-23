@@ -8,6 +8,8 @@ class InitialShema < ActiveRecord::Migration[5.0]
   		t.string :location
   		t.boolean :open, default: true
   		t.integer :awarded_proposal
+      t.float :latitude
+      t.float :longitude
   		t.timestamps
   end
 
@@ -34,4 +36,3 @@ class InitialShema < ActiveRecord::Migration[5.0]
 	  add_reference :abilities, :skill, index: true
 	end
 end
-

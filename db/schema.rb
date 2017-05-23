@@ -30,6 +30,8 @@ ActiveRecord::Schema.define(version: 20170522200822) do
     t.string   "location"
     t.boolean  "open",             default: true
     t.integer  "awarded_proposal"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
     t.integer  "category_id"

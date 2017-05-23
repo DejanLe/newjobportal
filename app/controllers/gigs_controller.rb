@@ -7,10 +7,10 @@ class GigsController < ApplicationController
 	 	@gigs = Gig.all.order("created_at DESC").page(params[:page]).per(15)
 	 	end
 
-	 	def new 
-	 	@gig = Gig.new 
+	 	def new
+	 	@gig = Gig.new
 	 	end
- 
+
 	 	def create
 	 		@gig = Gig.new(gig_params)
 			  respond_to do |format|
@@ -23,19 +23,20 @@ class GigsController < ApplicationController
 		      end
    		 end
 	 	end
-	 	
-	 	def show 
-	 		@gig = Gig.find(params[:id])
-	 	end
 
+	 	def show
+	 		@gig = Gig.find(params[:id])
+      @proposal
+	 	end
+    def search
+      @gigs = Gig.search(params).page(params[:page]).per(25)
+    end
  private
  def set_gig
       @gig = Gig.find(params[:id])
     end
- def gig_params 
+ def gig_params
  	params.require(:gig).permit(:name, :description, :budget, :location, :open)
 
  end
 end
-
- 

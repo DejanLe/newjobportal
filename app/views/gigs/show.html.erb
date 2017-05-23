@@ -1,14 +1,39 @@
 <div class="show-job-page">
 	<div class="container">
+		<div class="row">
 			<div class="col-md-9">
 				<h1>Job position: <%= @gig.name %></h1> <br>
 				<h4>Description: <%= @gig.description %></h4> <br>
 				<h5>Job location: <%= @gig.location %></h5> <br>
 				<h5>Budget: $<%= @gig.budget %> </h5>
 			</div>
+			<div class="col-xs-12 col-md-4">
+				<div class="content-inner-detail">
+					<legend>Submit a Proposal</legend>
+					<%= form_for :proposal, url: gig_proposals_path(@gig) do |f| %>
+					<div class="row">
+						<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<%= f.label :bid %>
+									<%= f.text_field :bid, rows: 5, class: "form-control input-lg" %>
+									<small class="help-block">Amountt of your bid</small>
+								</div>
+						</div>
+						<div class="col-xs-12 col-md-12">
+								<div class="form-group">
+									<%= f.label :description %>
+									<%= f.text_area :description, rows: 5, class: "form-control input-lg" %>
+									<small class="help-block">Explain the skills needed for this job.</small>
+								</div>
+						</div>
+					</div>
+					<br>
+					<%= f.submit "Submit a proposal", class: "btn btn-primary input-lg" %>
+					<% end %>
+				</div>
+			</div>
+
+		</div>
+
 	</div>
 </div>
-
-
-
-
