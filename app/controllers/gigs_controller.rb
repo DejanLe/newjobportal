@@ -1,8 +1,5 @@
 class GigsController < ApplicationController
   before_action :set_gig, only: [:show, :edit, :update, :destroy]
-
-
-
 	 def index
 	 	@gigs = Gig.all.order("created_at DESC").page(params[:page]).per(15)
 	 	end
