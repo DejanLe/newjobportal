@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-9">
-				<h1>Job position: <%= @gig.name %></h1> <br>
+				<h1>Job position: <%= @gig.name %></h1> <%= link_to "Back", root_path, class: "btn btn-info pull-right" %>   <br>
 				<h4>Description: <%= @gig.description %></h4> <br>
 				<h5>Job location: <%= @gig.location %></h5> <br>
 				<h5>Budget: $<%= @gig.budget %> </h5>
